@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#8fd3f4" />
+    <title>Submission 2 PWA Dicoding</title>
+    <link rel="apple-touch-icon" href="./assets/images/icons/icon-192x192.png">
+    <link rel="shortcut icon" href="./assets/images/icons/icon-72x72.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="./assets/css/materialize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="./assets/js/init.js"></script>
+    <script src="./assets/js/api.js" defer></script>
+    <script src="./assets/js/idb.js" defer></script>
+    <script src="./assets/js/db.js" defer></script>
+    <script src="./assets/js/functions.js" defer></script>
+    <script src="./assets/js/materialize.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Desktop Nav -->
+        <div class="navbar-fixed ">
+            <nav class="purple lighten-1">
+                <div class="nav-wrapper container">
+                    <a href="#!" class="brand-logo">Premier League</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">☰</a>
+
+                    <ul class="topnav right hide-on-med-and-down">
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile nav -->
+        <ul id="mobile-nav" class="sidenav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="./assets/images/background-nav.jpg">
+                    </div>
+                    <a href="#!"><img class="circle"
+                            src="./assets/images/user/user.jpg"></a>
+                    <a href="#!"><span class="white-text name">Steven Gerrad</span></a>
+                    <a href="#!"><span class="white-text email">stevengerrad@gmail.com</span></a>
+                </div>
+            </li>
+            <li>
+                <ul class="mobilenav">
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+      <!-- Main -->
+    <main>    
+        <img class="img-dashboard" width="100%" height="500px" src="./assets/images/home/home2.jpg">
+
+        <div class="container">
+            <div class="row justify-center f-column align-item-center center-align">
+                <div class="col s12 m12 l12" id="main-display">
+
+                    <div class="preloader-background">
+                        <div class="preloader-wrapper small active">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class=" page-footer purple lighten-1">
+        <div class="container">
+            <div class="footer-copyright purple lighten-1">
+                <div class="row justify-center">
+                    <div class="col">
+                        &copy; Submission 2 PWA Dicoding</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // REGISTER SERVICE WORKER
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/serviceWorker.js')
+                .then(function() {
+                    console.log('Pendaftaran ServiceWorker berhasil');
+                })
+                .catch(function(){
+                    console.log('Pendaftaran ServiceWorker gagal');
+                });
+            })
+        } else {
+            console.log("ServiceWorker belum didukung browser ini.")
+        }    
+        </script>
+
+</body>
+</html>
